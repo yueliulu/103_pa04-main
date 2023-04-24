@@ -1,0 +1,44 @@
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>description</th>
+            <th>amount</th>
+            <th>category</th>
+            <th>date</th>
+        </tr>
+    </thead>
+    <tbody>
+            <tr>
+                <td> <%= item.description %> </td>
+                <td><%= item.amount %></td>
+                <td><%= item.category %></td>
+                <td><%= item.date %></td>
+            </tr>
+
+    </tbody>
+</table>
+
+<form method="post" action="transaction/Update">
+    <input type="hidden" name="itemId" value="<%= item._id %>">
+    new description: 
+    <input type="text" 
+            value="<%= item.description %>"
+            name="description"
+            placeholder="description"><br>
+    new amount:
+    <input type="text" 
+            value="<%= item.amount %>"  
+            name="amount" 
+            placeholder="amount"><br>
+    new category:
+    <input type="text" 
+            value="<%= item.category %>"
+            name="category" 
+            placeholder="category"><br>
+    new date:
+    <input type="text" 
+            value="<%= item.date %>"
+            name="date" 
+            placeholder="date"><br>
+    <input type="submit" value="store">
+</form>

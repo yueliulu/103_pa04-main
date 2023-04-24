@@ -1,0 +1,19 @@
+<h1>Summary of all ToDoItem Users</h1>
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>category</th>
+            <th>amount</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% results.map(item => {%>
+            <tr>
+               <td> <%= item._id.category%> </td>
+               <td><%= item.amount %></td>
+            </tr>
+            
+            <% }) %>
+
+    </tbody>
+</table>
